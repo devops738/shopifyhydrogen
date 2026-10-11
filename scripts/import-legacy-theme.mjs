@@ -27,9 +27,7 @@ function clean(source) {
     .replace(/\{%\s*render\s+['"]ats-site-footer['"]\s*%\}/gi, footer)
     .replace(/\{\{\s*'([^']+)'\s*\|\s*asset_url[^}]*\}\}/gi, '/theme-assets/$1')
     .replace(/\{\{[\s\S]*?\}\}/g, '')
-    .replace(/\{%[\s\S]*?%\}/g, '')
-    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
-    .replace(/\s+on(?:click|change|submit|input)="[^"]*"/gi, '');
+    .replace(/\{%[\s\S]*?%\}/g, '');
 }
 
 await rm(destinationAssets, {recursive: true, force: true});

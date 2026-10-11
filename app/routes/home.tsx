@@ -1,5 +1,6 @@
 import {legacyPages} from '../legacy-pages';
+import {LegacyPage} from '../components/legacy-page';
 
 export default function Home() {
-  return <main dangerouslySetInnerHTML={{__html: legacyPages.home}} />;
+  return <LegacyPage sectionId="shopify-section-main-index" html={legacyPages.home} />;
 }
