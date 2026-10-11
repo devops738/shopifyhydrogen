@@ -1,9 +1,5 @@
-import {redirect} from 'react-router';
-
-export function loader() {
-  return redirect('/search/tires');
-}
+import {legacyPages} from '../legacy-pages';
 
 export default function Home() {
-  return null;
+  return <main dangerouslySetInnerHTML={{__html: legacyPages.home}} />;
 }

@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "react-router build",
+    "import:legacy": "node scripts/import-legacy-theme.mjs",
+    "build": "npm run import:legacy && react-router build",
     "preview": "react-router build && vite preview",
     "deploy": "shopify hydrogen deploy --assets-dir dist/client --worker-dir dist/server",
     "typecheck": "react-router typegen && tsc"

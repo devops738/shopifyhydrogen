@@ -3,3 +3,4 @@ dist/
 .env
 .shopify/
 .oxygen/
+.react-router/
